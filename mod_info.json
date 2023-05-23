@@ -1,0 +1,12 @@
+{
+    "id": "kel_relationship_matters",
+    "name": "Relationship Matters",
+    "author": "Kelenius",
+    "version": "0.3",
+    "description": "Makes raids less common when you have a good relationship with a faction.",
+    "gameVersion": "0.96a-RC8",
+    "jars": [
+        "jars/Relationship Matters.jar"
+    ],
+    "modPlugin": "data.scripts.RelationshipMattersPlugin"
+}

@@ -1,0 +1,7 @@
+{
+    "enabled": true,
+    "antiCompetitionRelBase": 25,
+    "antiCompetitionRelScaling": 2,
+    "antiFreePortRelBase": 50,
+    "antiFreePortRelScaling": 0.5
+}
