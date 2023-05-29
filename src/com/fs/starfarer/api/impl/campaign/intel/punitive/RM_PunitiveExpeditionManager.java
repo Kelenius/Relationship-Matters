@@ -6,6 +6,7 @@ import java.util.List;
 import com.fs.starfarer.api.campaign.FactionAPI;
 
 import data.scripts.RelationshipMattersPlugin;
+import data.scripts.RelationshipMattersPlugin.RelScalingType;
 
 public class RM_PunitiveExpeditionManager extends PunitiveExpeditionManager {
     @Override
@@ -16,10 +17,10 @@ public class RM_PunitiveExpeditionManager extends PunitiveExpeditionManager {
         for (PunExReason reason : result) {
             float scale = 1;
             if (reason.type == PunExType.ANTI_COMPETITION) {
-                scale = 1 - (curRel - RelationshipMattersPlugin.antiCompetitionRelBase) * RelationshipMattersPlugin.antiCompetitionRelScaling / 100;
+                scale = RelationshipMattersPlugin.GetRelScaling(curRel, RelScalingType.ANTI_COMPETITION);
             }
             else if (reason.type == PunExType.ANTI_FREE_PORT) {
-                scale = 1 - (curRel - RelationshipMattersPlugin.antiFreePortRelBase) * RelationshipMattersPlugin.antiFreePortRelScaling / 100;
+                scale = RelationshipMattersPlugin.GetRelScaling(curRel, RelScalingType.ANTI_FREE_PORT);
             }
 
             if (scale <= 0) {
@@ -35,11 +36,5 @@ public class RM_PunitiveExpeditionManager extends PunitiveExpeditionManager {
 
     public void copyOriginalData(PunitiveExpeditionManager original) {
         this.data = new LinkedHashMap<FactionAPI, PunExData>(original.getData());
-
-        // For whatever reason these are not accessible
-        // even though I should have access to it because this is a child of that class
-        
-        //this.timeout = original.timeout;
-        //this.numSentSinceTimeout = original.numSentSinceTimeout;
     }
 }

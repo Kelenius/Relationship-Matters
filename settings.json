@@ -3,5 +3,7 @@
     "antiCompetitionRelBase": 25,
     "antiCompetitionRelScaling": 2,
     "antiFreePortRelBase": 50,
-    "antiFreePortRelScaling": 0.5
+    "antiFreePortRelScaling": 1,
+    "inspectionRelBase": 50,
+    "inspectionRelScaling": 0.5
 }
