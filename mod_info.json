@@ -4,7 +4,7 @@
     "author": "Kelenius",
     "version": "0.3",
     "description": "Makes raids less common when you have a good relationship with a faction.",
-    "gameVersion": "0.96a-RC8",
+    "gameVersion": "0.96a-RC10",
     "jars": [
         "jars/Relationship Matters.jar"
     ],
